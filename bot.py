@@ -25,7 +25,7 @@ async def start(event):
     await event.reply("^_^ Hey, Welcome To TAG Help Bot's Menu\nI can tag 15,000 Members in Group and 300 Members In Channel.\nNeed Help /help ",
                       buttons=(
                           [
-                              Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'),
+                              Button.url('📣 UPDATES', 'https://t.me/his'),
                               Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'),
                           ],
                           [
