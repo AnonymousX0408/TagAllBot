@@ -22,14 +22,14 @@ moment_worker = []
 #start
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-    await event.reply("^_^ Hey, Welcome To TAG Help Bot's Menu\nI can tag 15,000 Members in Group and 300 Members In Channel.\nNeed Help /help ",
+    await event.reply("👋 Hey Welcome In Tag All Bot \n\n I Can Tag All Users In Your Groups Just Reply /all Or /tagall To Any Message And Then See My Power 🔥\n\n 💸 More Ads Free & Fast Bots @ProCoderZBots",
                       buttons=(
                           [
-                              Button.url('📣 UPDATES', 'https://t.me/his'),
-                              Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'),
+                              Button.url('📣 Update Channel', 'https://t.me/ProCoderZBots'),
+                              Button.url('😍 Official Channel', 'https://t.me/Pro_CoderZ'),
                           ],
                           [
-                              Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),
+                              Button.url('➕ Add Me To Your Group', 'https://t.me/UserTaggerProBot?startgroup=true'),
                           ]
                       ),
                       link_preview=False
@@ -38,15 +38,15 @@ async def start(event):
 #help
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-    helptext = "**Tag Help Bot's Help Menu**\n\nCommand: /all \n You can use this command with text you want to tell others. \n`Example: /all Good morning!` \nYou can use this command as an answer. any message Bot will tag users to replied message"
+    helptext = "**❤️ Welcome In Help Manu**\n I Can Tag All Members In Your Groups Just Reply /all Or /tagall To Any Message And Then See My Power\n\n💸 More Ads Free & Fast Bots : @ProCoderZBots"
     await event.reply(helptext,
                       buttons=(
                           [
-                              Button.url('📣 UPDATES', 'https://t.me/hiBots'),
-                              Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'),
+                              Button.url('📣 Update Channel', 'https://t.me/ProCoderZBots'),
+                              Button.url('😍 Official Channel', 'https://t.me/Pro_CoderZ'),
                           ],
                           [
-                              Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),
+                              Button.url('➕ Add Me To Your Group', 'https://t.me/UserTaggerProBot?startgroup=true'),
                           ]
                       ),
                       link_preview=False
