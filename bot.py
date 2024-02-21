@@ -42,7 +42,7 @@ async def help(event):
     await event.reply(helptext,
                       buttons=(
                           [
-                              Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'),
+                              Button.url('📣 UPDATES', 'https://t.me/hiBots'),
                               Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'),
                           ],
                           [
