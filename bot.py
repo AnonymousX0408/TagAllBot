@@ -56,6 +56,7 @@ async def help(event):
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel(event):
     global moment_worker
+    LOGGER.info("Cancel command received")
     if event.chat_id in moment_worker:
         moment_worker.remove(event.chat_id)
         await event.respond("❌ Process canceled!")
@@ -165,4 +166,4 @@ async def telegraph(client, message):
 print("Started Successfully Join Support")
 print("¯\_(ツ)_/¯ Need Help Join @DeCodeSupport")
 client.run_until_disconnected()
-                            
+        
