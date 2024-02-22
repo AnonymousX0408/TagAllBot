@@ -22,7 +22,7 @@ moment_worker = []
 #start
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-    await event.reply("**👋 Hey Welcome In Tag All Bot**\n\n I Can Tag All Users In Your Groups Just Reply /all Or /tagall To Any Message And Then See My Power 🔥\n\n**💸 More Ads Free & Fast Bots @ProCoderZBots**",
+    await event.reply("**👋 Hey Welcome In Tag All Bot**\n\n I Can Tag All Users In Your Groups Just Reply  /all Or /tagall To Any Message And Then See My Power 🔥\n\n**💸 More Ads Free & Fast Bots @ProCoderZBots**",
                       buttons=(
                           [
                               Button.url('📣 Update Channel', 'https://t.me/ProCoderZBots'),
