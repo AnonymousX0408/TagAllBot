@@ -25,11 +25,11 @@ async def start(event):
     await event.reply("**👋 Hey Welcome In Tag All Bot**\n\n I Can Tag All Users In Your Groups Just Reply \n/all Or /tagall To Any Message And Then See My Power 🔥\n\n**💸 More Ads Free & Fast Bots @ProCoderZBots**",
                       buttons=(
                           [
-                              Button.url('📣 Update Channel', 'https://t.me/ProCoderZBots'),
-                              Button.url('😍 Official Channel', 'https://t.me/Pro_CoderZ'),
+                              Button.url('『Uᴘᴅᴀᴛᴇs』', 'https://t.me/ProCoderZBots'),
+                              Button.url('『Cʜᴀɴɴᴇʟ』', 'https://t.me/Pro_CoderZ'),
                           ],
                           [
-                              Button.url('➕ Add Me To Your Group', 'https://t.me/UserTaggerProBot?startgroup=true'),
+                              Button.url('➕ Aᴅᴅ Mᴇ ➕', 'https://t.me/UserTaggerProBot?startgroup=true'),
                           ]
                       ),
                       link_preview=False
@@ -42,11 +42,11 @@ async def help(event):
     await event.reply(helptext,
                       buttons=(
                           [
-                              Button.url('📣 Update Channel', 'https://t.me/ProCoderZBots'),
-                              Button.url('😍 Official Channel', 'https://t.me/Pro_CoderZ'),
+                              Button.url('『Uᴘᴅᴀᴛᴇs』', 'https://t.me/ProCoderZBots'),
+                              Button.url('『Cʜᴀɴɴᴇʟ』', 'https://t.me/Pro_CoderZ'),
                           ],
                           [
-                              Button.url('➕ Add Me To Your Group', 'https://t.me/UserTaggerProBot?startgroup=true'),
+                              Button.url('➕ Aᴅᴅ Mᴇ ➕', 'https://t.me/UserTaggerProBot?startgroup=true'),
                           ]
                       ),
                       link_preview=False
