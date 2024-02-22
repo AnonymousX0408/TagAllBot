@@ -121,6 +121,13 @@ async def mentionall(event):
                 await asyncio.sleep(2)
                 usrnum = 0
                 usrtxt = ""
+    
+    # Tag all admins
+    if "@admin" in event.pattern_match.group(0):
+        admins_text = ""
+        for admin_id in admins:
+            admins_text += f"[{admin_id}](tg://user?id={admin_id}) "
+        await client.send_message(event.chat_id, admins_text + f"\n\n{msg}")
 
 #telegraph 
 @client.on(events.NewMessage(pattern="^/t$"))
@@ -166,4 +173,4 @@ async def telegraph(client, message):
 print("Started Successfully Give A Thanks To My Boss : @Mr_RoleXG")
 print("🤙 Need Help Contact My Boss : @Mr_RoleXG")
 client.run_until_disconnected()
-        
+    
