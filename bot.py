@@ -22,7 +22,7 @@ moment_worker = []
 #start
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-    await event.reply("👋 Hey Welcome In Tag All Bot \n\n I Can Tag All Users In Your Groups Just Reply /all Or /tagall To Any Message And Then See My Power 🔥\n\n 💸 More Ads Free & Fast Bots @ProCoderZBots",
+    await event.reply("**👋 Hey Welcome In Tag All Bot**\n\n I Can Tag All Users In Your Groups Just Reply /all Or /tagall To Any Message And Then See My Power 🔥\n\n**💸 More Ads Free & Fast Bots @ProCoderZBots**",
                       buttons=(
                           [
                               Button.url('📣 Update Channel', 'https://t.me/ProCoderZBots'),
@@ -38,7 +38,7 @@ async def start(event):
 #help
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-    helptext = "**❤️ Welcome In Help Manu**\n I Can Tag All Members In Your Groups Just Reply /all Or /tagall To Any Message And Then See My Power\n\n💸 More Ads Free & Fast Bots : @ProCoderZBots"
+    helptext = "**❤️ Welcome In Help Manu**\n I Can Tag All Members In Your Groups Just Reply /all Or /tagall To Any Message And Then See My Power\n\n**💸 More Ads Free & Fast Bots : @ProCoderZBots**"
     await event.reply(helptext,
                       buttons=(
                           [
@@ -56,25 +56,25 @@ async def help(event):
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel(event):
     global moment_worker
-    LOGGER.info("Cancel command received")
+    LOGGER.info("😍 Cancel command received")
     if event.chat_id in moment_worker:
         moment_worker.remove(event.chat_id)
         await event.respond("❌ Process canceled!")
     else:
-        await event.respond("No active process to cancel.")
+        await event.respond("💸 No active process to cancel.")
 
 #tag
 @client.on(events.NewMessage(pattern="^/tagall|/call|/tall|/all|#all|@all?(.*)"))
 async def mentionall(event):
     global moment_worker
     if event.is_private:
-        return await event.respond("Use This In Channel or Group!")
+        return await event.respond("🔥 Use This Only In Your Groups")
 
     admins = []
     async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
         admins.append(admin.id)
     if not event.sender_id in admins:
-        return await event.respond("Only Admin can use it.")
+        return await event.respond("🐣 Sorry Bro, Only Admin can use it.")
 
     if event.pattern_match.group(1):
         mode = "text_on_cmd"
@@ -83,11 +83,11 @@ async def mentionall(event):
         mode = "text_on_reply"
         msg = event.reply_to_msg_id
         if msg == None:
-            return await event.respond("I can't Mention Members for Old Post!")
+            return await event.respond("🤙 Sorry I can't Mention Members for Old Post!")
     elif event.pattern_match.group(1) and event.reply_to_msg_id:
-        return await event.respond("Give me can an Argument. Ex: `/tag Hey, Where are you`")
+        return await event.respond("Give me can an Argument. Ex: `@all Hey, Where are you`")
     else:
-        return await event.respond("Reply to Message or Give Some Text To Mention!")
+        return await event.respond("💫 Please Reply to Message or Give Some Text To Mention! For Example: `@all Hey, Where are you`")
 
     if mode == "text_on_cmd":
         moment_worker.append(event.chat_id)
@@ -97,7 +97,7 @@ async def mentionall(event):
             usrnum += 1
             usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
             if event.chat_id not in moment_worker:
-                await event.respond("Stopped!")
+                await event.respond("💯 Successfully Stopped!")
                 return
             if usrnum == 5:
                 await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -114,7 +114,7 @@ async def mentionall(event):
             usrnum += 1
             usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
             if event.chat_id not in moment_worker:
-                await event.respond("Stopped")
+                await event.respond("💯 Successfully Stopped")
                 return
             if usrnum == 5:
                 await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -145,7 +145,7 @@ async def telegraph(client, message):
             and replied.document.file_size <= 5242880
         )
     ):
-        await message.reply("Not supported!")
+        await message.reply("💞 Sorry I Can't Help In This Because This Not Supported If You Want Then You Can Contact With My Boss : @Mr_RoleXG")
         return
     download_location = await client.download_media(
         message=message.reply_to_message,
@@ -163,7 +163,7 @@ async def telegraph(client, message):
     finally:
         os.remove(download_location)
 
-print("Started Successfully Join Support")
-print("¯\_(ツ)_/¯ Need Help Join @DeCodeSupport")
+print("Started Successfully Give A Thanks To My Boss : @Mr_RoleXG")
+print("🤙 Need Help Contact My Boss : @Mr_RoleXG")
 client.run_until_disconnected()
         
