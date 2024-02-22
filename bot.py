@@ -68,7 +68,7 @@ async def cancel(event):
 async def mentionall(event):
     global moment_worker
     if event.is_private:
-        return await event.respond("*ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴠᴀʟɪᴅ ғᴏʀ ɢʀᴏᴜᴘs!*")
+        return await event.respond("**ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴠᴀʟɪᴅ ғᴏʀ ɢʀᴏᴜᴘs!**")
 
     admins = []
     async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
