@@ -61,7 +61,7 @@ async def cancel(event):
         moment_worker.remove(event.chat_id)
         await event.respond("❌ Process canceled!")
     else:
-        await event.respond("💸 No active process to cancel.")
+        await event.respond("__There is no proccess on going...__")
 
 #tag
 @client.on(events.NewMessage(pattern="^/tagall|/call|/tall|/all|#all|@all?(.*)"))
